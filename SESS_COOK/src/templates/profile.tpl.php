@@ -5,11 +5,10 @@ include 'src/templates/header.tpl.php';
     <article>
         <h2><?= $title; ?></h2>
     </article>
-    <?php
-    if (isset($lastTime)) {
-        echo '<p>Entraste por ultima vez: ' . $lastTime . ' </p>';
-    }
-    ?>
+    <section>
+        <p>Nombre Usuario: <?= $username ?></p>
+        <p>Correo electronico: <?= $email ?></p>
+    </section>
 </main>
 <?php
 include 'src/templates/footer.tpl.php';

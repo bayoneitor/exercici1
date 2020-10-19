@@ -10,5 +10,6 @@ session_destroy();
 //Eliminar cookie
 setcookie("username", $user, time() - 1, "/");
 setcookie("password", $pwd, time() - 1, "/");
+setcookie("lastTime", $pwd, time() - 1, "/");
 
 header('Location:index.php');

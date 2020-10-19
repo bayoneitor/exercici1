@@ -11,7 +11,7 @@ include 'src/templates/header.tpl.php';
     <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" required>
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me"> Recordarme
+            <input type="checkbox" value="true" name="remember-me"> Recordarme
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit" name="login-button">Iniciar Sesión</button>

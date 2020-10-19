@@ -5,7 +5,7 @@ session_start();
 //Primero miramos que no este la session definida
 if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
     //Miramos si pueden entrar por cookies
-    if (isset($_COOKIE["username"]) || isset($_COOKIE["password"])) {
+    if (isset($_COOKIE["username"]) && isset($_COOKIE["password"])) {
         $cookie = true;
         $user = $_COOKIE["username"];
         $pwd = $_COOKIE["password"];
@@ -66,10 +66,11 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
                     if (isset($email)) {
                         $_SESSION["email"] = $email;
                         $_SESSION["username"] = $user;
-                        if ($cookie == false) {
+                        if ($cookie == false && isset($_POST['remember-me'])) {
                             //Si la cookie no esta definida, la definimos
                             setcookie("username", $user, time() + 60 * 60 * 24 * 30, "/");
                             setcookie("password", $pwd, time() + 60 * 60 * 24 * 30, "/");
+                            setcookie("lastTime", date('l jS \of F Y h:i:s A'), time() + 60 * 60 * 24 * 30, "/");
                         }
                         header('Location: /');
                     } else {
