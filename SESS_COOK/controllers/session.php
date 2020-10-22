@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', 'On');
-session_start();
 
 //Primero miramos que no este la session definida
 if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
@@ -72,24 +70,24 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
                             setcookie("password", $pwd, time() + 60 * 60 * 24 * 30, "/M7/exercici1/SESS_COOK/");
                             setcookie("lastTime", date('l jS \of F Y h:i:s A'), time() + 60 * 60 * 24 * 30, "/M7/exercici1/SESS_COOK/");
                         }
-                        header('Location: index.php');
+                        header('Location: ?url=home');
                     } else {
-                        header('Location: login?error=notExists');
+                        header('Location: ?url=login&error=notExists');
                     }
                 } else {
                     //Error conexion BD
-                    header('Location: login?error=db');
+                    header('Location: ?url=login&error=db');
                 }
             } else {
                 //Elementos vacios
-                header('Location: login?error=emptyfields');
+                header('Location: ?url=login&error=emptyfields');
             }
         } else {
-            header('Location: index.php?error=1');
+            header('Location: ?url=home&error=1');
         }
     } else {
-        header('Location: index.php?error=2');
+        header('Location: ?url=home&error=2');
     }
 } else {
-    header('Location: index.php?error=3');
+    header('Location: ?url=home&error=3');
 }

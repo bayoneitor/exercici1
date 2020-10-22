@@ -1,5 +1,7 @@
 Options +FollowSymLinks
 
+RewriteBase /M7/exercici1/SESS_COOK
+
 RewriteEngine On
 
 RewriteRule !\.(js|gif|jpg|png|css)$ index.php

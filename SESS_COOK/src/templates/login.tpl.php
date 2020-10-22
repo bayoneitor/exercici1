@@ -2,7 +2,7 @@
 include 'src/templates/header.tpl.php';
 ?>
 
-<form class="form-signin" action="login.php" method="post">
+<form class="form-signin" action="?url=session" method="post">
     <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesion</h1>
     <label for="inputUser" class="sr-only">Usuario</label>
     <input type="text" id="inputUser" name="inputUser" class="form-control" placeholder="Usuario" required autofocus>
