@@ -8,8 +8,8 @@ session_destroy();
 // Redirige a index.php
 
 //Eliminar cookie
-setcookie("username", $user, time() - 1, "/");
-setcookie("password", $pwd, time() - 1, "/");
-setcookie("lastTime", $pwd, time() - 1, "/");
+setcookie("username", $user, time() - 1, "/M7/exercici1/SESS_COOK/");
+setcookie("password", $pwd, time() - 1, "/M7/exercici1/SESS_COOK/");
+setcookie("lastTime", $pwd, time() - 1, "/M7/exercici1/SESS_COOK/");
 
 header('Location:index.php');

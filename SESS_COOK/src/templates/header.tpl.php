@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/M7/exercici1/SESS_COOK/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
@@ -50,19 +50,19 @@
                             ' . $username . '
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/profile">Perfil</a>
+                            <a class="dropdown-item" href="/M7/exercici1/SESS_COOK/profile">Perfil</a>
                             <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="/logout.php">Cerrar Sesión</a>
+                            <a class="dropdown-item" href="/M7/exercici1/SESS_COOK/logout.php">Cerrar Sesión</a>
                         </div>
                     </li>
                     ';
         } else {
             echo '
                     <li class="nav-item">
-                        <a href="/register" class="btn btn-sm btn-outline-light">Registrarse</a>
+                        <a href="/M7/exercici1/SESS_COOK/register" class="btn btn-sm btn-outline-light">Registrarse</a>
                   </li>
                   <li class="nav-item">
-                        <a href="/login" class="btn btn-sm btn-outline-light">Iniciar Sesión</a>
+                        <a href="/M7/exercici1/SESS_COOK/login" class="btn btn-sm btn-outline-light">Iniciar Sesión</a>
                     </li>
                     ';
         }

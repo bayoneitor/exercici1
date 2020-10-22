@@ -35,14 +35,14 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
 
                     insertSchema($db, ['username' => $user, 'email' => $email, 'password' => $pwd]);
 
-                    header('Location: /login#?success');
+                    header('Location: login#?success');
                 } else {
                     //Error conexion BD
-                    header('Location: /register#?error=db');
+                    header('Location: register#?error=db');
                 }
             } else {
                 //error vacio
-                header('Location: /register#?error=emptyfields');
+                header('Location: register#?error=emptyfields');
             }
 
             //Miramos si viene por login y si viene por cookie le damos otros parametros arriba
@@ -68,28 +68,28 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
                         $_SESSION["username"] = $user;
                         if ($cookie == false && isset($_POST['remember-me'])) {
                             //Si la cookie no esta definida, la definimos
-                            setcookie("username", $user, time() + 60 * 60 * 24 * 30, "/");
-                            setcookie("password", $pwd, time() + 60 * 60 * 24 * 30, "/");
-                            setcookie("lastTime", date('l jS \of F Y h:i:s A'), time() + 60 * 60 * 24 * 30, "/");
+                            setcookie("username", $user, time() + 60 * 60 * 24 * 30, "/M7/exercici1/SESS_COOK/");
+                            setcookie("password", $pwd, time() + 60 * 60 * 24 * 30, "/M7/exercici1/SESS_COOK/");
+                            setcookie("lastTime", date('l jS \of F Y h:i:s A'), time() + 60 * 60 * 24 * 30, "/M7/exercici1/SESS_COOK/");
                         }
-                        header('Location: /');
+                        header('Location: index.php');
                     } else {
-                        header('Location: /login#?error=notExists');
+                        header('Location: login#?error=notExists');
                     }
                 } else {
                     //Error conexion BD
-                    header('Location: /login#?error=db');
+                    header('Location: login#?error=db');
                 }
             } else {
                 //Elementos vacios
-                header('Location: /login#?error=emptyfields');
+                header('Location: login#?error=emptyfields');
             }
         } else {
-            header('Location: /');
+            header('Location: index.php');
         }
     } else {
-        header('Location: /');
+        header('Location: index.php');
     }
 } else {
-    header('Location: /');
+    header('Location: index.php');
 }
