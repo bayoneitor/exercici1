@@ -9,7 +9,7 @@ if (isset($_SESSION["username"]) || isset($_SESSION["email"])) {
     $username = $_SESSION["username"];
     $email = $_SESSION["email"];
 } else if (isset($_COOKIE["username"]) || isset($_COOKIE["password"])) {
-    header('Location: /login.php');
+    header('Location: login.php');
 }
 
 //sistema de enrutamiento

@@ -35,14 +35,14 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
 
                     insertSchema($db, ['username' => $user, 'email' => $email, 'password' => $pwd]);
 
-                    header('Location: login#?success');
+                    header('Location: ?url=login&success');
                 } else {
                     //Error conexion BD
-                    header('Location: register#?error=db');
+                    header('Location: ?url=register&error=db');
                 }
             } else {
                 //error vacio
-                header('Location: register#?error=emptyfields');
+                header('Location: ?url=register&error=emptyfields');
             }
 
             //Miramos si viene por login y si viene por cookie le damos otros parametros arriba
