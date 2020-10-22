@@ -74,22 +74,22 @@ if (!isset($_SESSION["email"]) && !isset($_SESSION["username"])) {
                         }
                         header('Location: index.php');
                     } else {
-                        header('Location: login#?error=notExists');
+                        header('Location: login?error=notExists');
                     }
                 } else {
                     //Error conexion BD
-                    header('Location: login#?error=db');
+                    header('Location: login?error=db');
                 }
             } else {
                 //Elementos vacios
-                header('Location: login#?error=emptyfields');
+                header('Location: login?error=emptyfields');
             }
         } else {
-            header('Location: index.php');
+            header('Location: index.php?error=1');
         }
     } else {
-        header('Location: index.php');
+        header('Location: index.php?error=2');
     }
 } else {
-    header('Location: index.php');
+    header('Location: index.php?error=3');
 }
