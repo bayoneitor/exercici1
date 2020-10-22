@@ -52,7 +52,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="?url=profile">Perfil</a>
                             <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
+                            <a class="dropdown-item" href="?url=logout">Cerrar Sesión</a>
                         </div>
                     </li>
                     ';
