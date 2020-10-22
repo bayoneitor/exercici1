@@ -1,6 +1,6 @@
 <?php
 // Iniciar session y mantener session
-// session_start();
+session_start();
 // Eliminar elementos de la variable session
 session_unset();
 // Destruye la variable de session y la cookie
